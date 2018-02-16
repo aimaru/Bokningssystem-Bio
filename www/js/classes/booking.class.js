@@ -231,7 +231,7 @@ class Booking extends Base {
       if(User.loggedIn) {
         that.wrongEmail = false;
       }
-			if (that.wrongEmail == true) {
+			if (that.wrongEmail == true || !Booking.markedSeats == []) {
 				return;
 			}
 			let title = $('#title-booking').text();
