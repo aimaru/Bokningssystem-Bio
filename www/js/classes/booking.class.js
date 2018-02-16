@@ -7,7 +7,7 @@ class Booking extends Base {
 		this.movie = this.findMovie();
     if(!App.instanceReady) this.doOnce();
     Booking.markedSeats = [];
-		this.wrongEmail = true;   // 最初は入力できる状態にしておく
+		this.wrongEmail = true;
 		this.bookingItems = [
 			{
 				type: 'ordinary',
@@ -205,9 +205,6 @@ class Booking extends Base {
     }
 
   }
-
-
-
 
 	validateEmail() {
 		$(document).on('keyup', '#email-booking', () => {
